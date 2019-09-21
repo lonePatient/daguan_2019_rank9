@@ -5,7 +5,7 @@
 
 ## 所使用的模型
 
-！[](./models.PNG)
+![](./models.PNG)
 
 ## 答辩ppt
 
