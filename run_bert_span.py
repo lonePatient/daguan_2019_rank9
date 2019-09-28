@@ -146,7 +146,7 @@ def run_test(args):
     label_list = processor.get_labels()
     label2id = {label: i for i, label in enumerate(label_list)}
     id2label = {i: label for i, label in enumerate(label_list)}
-    model = BERTLSTMSpan.from_pretrained(args.resume_path, label2id=label2id, device=args.device)
+    model = BERTLSTMSpan.from_pretrained(args.resume_path, label2id=label2id, soft_label=args.soft_label)
     model.to(args.device)
     max_seq_len = args.eval_max_seq_len
     tokenizer = processor.tokenizer
