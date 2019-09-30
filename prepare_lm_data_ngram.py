@@ -135,7 +135,7 @@ def create_masked_lm_predictions(tokens, masked_lm_prob, max_predictions_per_seq
     for p in masked_token_labels:
         mask_indices.append(p.index)
         masked_labels.append(p.label)
-    return tokens, mask_indices, masked_token_labels
+    return tokens, mask_indices, masked_labels
 
 
 def build_examples(file_path, max_seq_len, masked_lm_prob, max_predictions_per_seq, vocab_list):
