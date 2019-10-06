@@ -127,8 +127,8 @@ def create_masked_lm_predictions(tokens, masked_lm_prob, max_predictions_per_seq
                 # 10% of the time, replace with random word
                 else:
                     masked_token = random.choice(vocab_list)
-            tokens[index] = masked_token
             masked_token_labels.append(MaskedLmInstance(index=index, label=tokens[index]))
+            tokens[index] = masked_token
     masked_token_labels = sorted(masked_token_labels, key=lambda x: x.index)
     mask_indices = []
     masked_labels = []
