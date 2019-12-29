@@ -112,7 +112,7 @@ def main():
                         help="Store training data as on-disc memmaps to massively reduce memory usage")
     parser.add_argument("--epochs", type=int, default=4,
                         help="Number of epochs to train for")
-    parser.add_argument('--num_eval_steps', default=200)
+    parser.add_argument('--num_eval_steps', default=2000)
     parser.add_argument('--num_save_steps', default=5000)
     parser.add_argument("--local_rank", type=int, default=-1,
                         help="local_rank for distributed training on gpus")
